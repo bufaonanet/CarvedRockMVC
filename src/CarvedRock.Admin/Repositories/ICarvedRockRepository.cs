@@ -1,0 +1,14 @@
+﻿using CarvedRock.Admin.Data;
+
+namespace CarvedRock.Admin.Repositories;
+
+public interface ICarvedRockRepository
+{
+    Task<List<Product>> GetAllProductsAsync();
+    Task<Product> GetProductByIdAsync(int productId);
+    Task<Product> AddProductAsync(Product product);
+    Task UpdateProductAsync(Product product);
+    Task RemoveProductAsync(int productIdToRemove);
+    Task<List<Category>> GetAllCategoriesAsync();
+    Task<Category> GetCategoryByAsync(int categoryId);
+}
